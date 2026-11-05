@@ -1,0 +1,69 @@
+SPECTRUM-LAB PRO 4.17.6 — cópia para Linux Mint
+
+ESTADO: executável Linux x86_64 gerado em Linux Mint 22.3, Python 3.12.3.
+Compilação atualizada em 29/10/2026, Build 1274. Validação de hardware pendente.
+O projeto Windows original não foi alterado. Nenhum banco de usuários,
+histórico, calibração ou configuração pessoal foi copiado.
+
+PARA ABRIR A VERSÃO COMPILADA
+Abra SpectrumLabPro_4_17_6 dentro da pasta dist/SpectrumLabPro_4_17_6.
+Mantenha a pasta _internal junto do executável. Não precisa instalar Python.
+
+FLUXO DA LEITURA NORMAL (atualizado em 29/10/2026)
+O resultado aparece ao terminar a aquisição, antes do recuo do sensor.
+Após o recuo, a porta e a gaveta permanecem fechadas. Clique em Nova
+Leitura para abrir e trocar a amostra; confirme para iniciar a próxima.
+O ensaio de repetibilidade mantém seu fluxo próprio.
+
+PARA RECOMPILAR
+1. Extraia este ZIP numa pasta do notebook (não execute dentro do ZIP).
+2. Abra um terminal nessa pasta e instale os requisitos do sistema:
+
+sudo apt update
+sudo apt install python3 python3-venv python3-dev build-essential binutils libgl1 libegl1 libxkbcommon-x11-0 libxcb-xinerama0 libxcb-icccm4 libxcb-image0 libxcb-keysyms1 libxcb-render-util0 libxcb-randr0 libxcb-xfixes0 libxcb-shape0 libdbus-1-3 libfontconfig1 libx11-xcb1
+
+3. Compile (precisa de internet):
+
+bash compilar_linux.sh
+
+4. Execute:
+
+./dist/SpectrumLabPro_4_17_6/SpectrumLabPro_4_17_6
+
+Mantenha toda a pasta do executável, incluindo _internal. O script também
+cria um .tar.gz com o programa completo. Compile na arquitetura do notebook.
+Para outro Mint, a compatibilidade depende das bibliotecas do sistema;
+compilar no próprio notebook evita diferenças entre sistemas.
+
+USB / ESP32
+Se houver erro de permissão na porta serial, execute:
+sudo usermod -aG dialout "$USER"
+Depois encerre a sessão e entre novamente. As portas no Linux costumam
+aparecer como /dev/ttyUSB0 ou /dev/ttyACM0. Selecione a porta detectada.
+Wi-Fi usa o endereço do ESP32 e depende do acesso pela rede.
+Bluetooth serial exige emparelhamento e uma porta serial configurada no Linux;
+a disponibilidade depende do adaptador, do sistema e do firmware.
+
+DADOS
+Na cópia Linux, os dados ficam em ~/.local/share/SpectrumLabPro por padrão
+(ou XDG_DATA_HOME/SpectrumLabPro). A abertura de PDF usa o leitor do sistema.
+Nenhuma conexão com hardware foi testada neste pacote.
+
+Fontes técnicas: https://pyinstaller.org/en/stable/
+
+ATUALIZAÇÕES DO BUILD 1273
+- Resultado da leitura normal exibido antes do recuo. A porta e a gaveta
+  permanecem fechadas até clicar em Nova Leitura novamente.
+- Alarmes: eventos atualizados em blocos, apenas com a aba visível; console
+  limitado a 1000 linhas. O histórico persistente de alarmes é preservado.
+- Histórico: Exportar PDFs em lote, um arquivo por ensaio em nova subpasta.
+  Filtros: dia, semana (segunda a domingo), intervalo de datas, faixa de
+  Kappa, operador, método e amostra; todos os registros ou selecionados.
+  Use Ctrl/Shift para selecionar vários ensaios. A exportação individual
+  continua disponível. A exportação em lote pode ser cancelada; os PDFs
+  já concluídos permanecem salvos.
+
+BUILD 1274: Reler Amostra mede novamente a mesma amostra, mantendo seu
+codigo e sem abrir porta ou gaveta. Disponivel apos leitura valida, com
+a amostra retida e todos os intertravamentos confirmados. Nova Leitura
+abre para trocar a amostra. Cada releitura e um novo registro no Historico.

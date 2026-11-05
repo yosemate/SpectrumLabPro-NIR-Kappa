@@ -1,0 +1,201 @@
+{
+  "schema": 1,
+  "method": "snv",
+  "components": 1,
+  "channels": [
+    610,
+    680,
+    730,
+    760,
+    810,
+    860
+  ],
+  "units": "relative_fraction",
+  "mode": "seco",
+  "reference": null,
+  "coef": [
+    -1.6493255257606745,
+    -0.118904501062608,
+    2.6230338013980927,
+    2.112131616093142,
+    -1.247794009069732,
+    -1.7191413815982135
+  ],
+  "offset": 11.802777192338446,
+  "sample_ids": [
+    "K19.28",
+    "K19.95",
+    "K4.27",
+    "K4.50"
+  ],
+  "kappa_range": [
+    4.27,
+    19.95
+  ],
+  "limitation": "EXPERIMENTAL — sem validação industrial; não substitui Kappa laboratorial.",
+  "validation": {
+    "validation": "leave-one-physical-sample-out; 1 component fixed a priori",
+    "limitation": "EXPERIMENTAL — sem validação industrial; não substitui Kappa laboratorial.",
+    "excluded_assumed_samples": [
+      "Celulose Branqueada"
+    ],
+    "methods": {
+      "raw": {
+        "metrics": {
+          "n_samples": 4,
+          "rmse": 6.550693621936973,
+          "mae": 6.006087932604872,
+          "bias": 1.271181987973879,
+          "r2": 0.260794406835965
+        },
+        "folds": [
+          {
+            "test_sample": "K19.28",
+            "train_samples": [
+              "K19.95",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.28,
+            "predicted": 28.28466789571171,
+            "position_predictions": [
+              28.011915292700333,
+              24.03564595231099,
+              32.80644244212382
+            ],
+            "position_range": 8.770796489812827
+          },
+          {
+            "test_sample": "K19.95",
+            "train_samples": [
+              "K19.28",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.95,
+            "predicted": 12.483560000846555,
+            "position_predictions": [
+              12.483560000846555
+            ],
+            "position_range": 0.0
+          },
+          {
+            "test_sample": "K4.27",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.50"
+            ],
+            "actual": 4.27,
+            "predicted": 2.2666281098914567,
+            "position_predictions": [
+              2.2666281098914567
+            ],
+            "position_range": 0.0
+          },
+          {
+            "test_sample": "K4.50",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.27"
+            ],
+            "actual": 4.5,
+            "predicted": 10.049871945445794,
+            "position_predictions": [
+              10.049871945445794
+            ],
+            "position_range": 0.0
+          }
+        ],
+        "mean_baseline_metrics": {
+          "n_samples": 4,
+          "rmse": 10.158823203938974,
+          "mae": 10.153333333333334,
+          "bias": 0.0,
+          "r2": -0.7777777777777781
+        }
+      },
+      "snv": {
+        "metrics": {
+          "n_samples": 4,
+          "rmse": 2.154006312786676,
+          "mae": 1.844099933588141,
+          "bias": 0.18412226766784112,
+          "r2": 0.9200746379598465
+        },
+        "folds": [
+          {
+            "test_sample": "K19.28",
+            "train_samples": [
+              "K19.95",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.28,
+            "predicted": 17.92156035061365,
+            "position_predictions": [
+              18.751862857113036,
+              18.83822465704768,
+              16.174593537680234
+            ],
+            "position_range": 2.6636311193674445
+          },
+          {
+            "test_sample": "K19.95",
+            "train_samples": [
+              "K19.28",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.95,
+            "predicted": 20.45528094611427,
+            "position_predictions": [
+              20.45528094611427
+            ],
+            "position_range": 0.0
+          },
+          {
+            "test_sample": "K4.27",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.50"
+            ],
+            "actual": 4.27,
+            "predicted": 2.3084843175457515,
+            "position_predictions": [
+              2.3084843175457515
+            ],
+            "position_range": 0.0
+          },
+          {
+            "test_sample": "K4.50",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.27"
+            ],
+            "actual": 4.5,
+            "predicted": 8.051163456397692,
+            "position_predictions": [
+              8.051163456397692
+            ],
+            "position_range": 0.0
+          }
+        ],
+        "mean_baseline_metrics": {
+          "n_samples": 4,
+          "rmse": 10.158823203938974,
+          "mae": 10.153333333333334,
+          "bias": 0.0,
+          "r2": -0.7777777777777781
+        }
+      },
+      "msc": {
+        "unavailable": "Inclinação MSC nula ou negativa."
+      }
+    }
+  },
+  "source_sha256": "ff447d2467c5cd4b666a30aa51eae9cc43f4475bf91dae32736fd6c329c33fc3"
+}

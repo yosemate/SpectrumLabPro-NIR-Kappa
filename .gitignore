@@ -1,0 +1,17 @@
+# Python bytecode & ambientes virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+.venv*/
+venv/
+env/
+
+# Diretórios de build do PyInstaller / Wine
+build*/
+dist*/
+.wine*/
+.windows-wheels/
+*.log
+
+# Bancos de dados locais de sessão temporária
+*.db-journal

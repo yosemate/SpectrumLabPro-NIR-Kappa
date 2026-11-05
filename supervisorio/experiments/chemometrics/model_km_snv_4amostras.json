@@ -1,0 +1,122 @@
+{
+  "schema": 1,
+  "method": "km_snv",
+  "components": 1,
+  "channels": [
+    610,
+    680,
+    730,
+    760,
+    810,
+    860
+  ],
+  "units": "relative_fraction",
+  "mode": "seco",
+  "reference": 0.011,
+  "coef": [
+    3.9376884124323834,
+    -6.167788131193122,
+    -8.779182458619987,
+    4.555537527505126,
+    6.096974633099943,
+    0.3567700167661054
+  ],
+  "offset": 5.151804928865327,
+  "sample_ids": [
+    "Celulose Branqueada",
+    "K4.27",
+    "K4.50",
+    "K19.28",
+    "K19.95"
+  ],
+  "kappa_range": [
+    0.58,
+    19.95
+  ],
+  "limitation": "EXPERIMENTAL — sem validação industrial; não substitui Kappa laboratorial.",
+  "display_name": "PLS KM-SNV 5 Amostras c/ Âncora Celulose Branqueada (Firmware PLS_ACQ_1)",
+  "validation": {
+    "validation": "leave-one-physical-sample-out across 2 white calibrations + position/CV invariance; Kubelka-Munk + Damped SNV (eps=0.011)",
+    "limitation": "EXPERIMENTAL — sem validação industrial; não substitui Kappa laboratorial.",
+    "excluded_assumed_samples": [
+      "Celulose Branqueada"
+    ],
+    "methods": {
+      "km_snv": {
+        "metrics": {
+          "n_samples": 4,
+          "rmse": 2.3521528299951173,
+          "mae": 2.1896691245213784,
+          "bias": -0.4082179016964711,
+          "r2": 0.9046936710656064
+        },
+        "folds": [
+          {
+            "test_sample": "K19.28",
+            "train_samples": [
+              "K19.95",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.28,
+            "predicted": 20.032500261409133,
+            "position_predictions": [
+              20.07383968250222,
+              19.978940250795183,
+              19.675207165014207,
+              20.40201394732493
+            ],
+            "position_range": 0.7268067823107245
+          },
+          {
+            "test_sample": "K19.95",
+            "train_samples": [
+              "K19.28",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.95,
+            "predicted": 17.062422915246735,
+            "position_predictions": [
+              17.548884654159373,
+              16.575961176334097
+            ],
+            "position_range": 0.972923477825276
+          },
+          {
+            "test_sample": "K4.27",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.50"
+            ],
+            "actual": 4.27,
+            "predicted": 1.961803032317565,
+            "position_predictions": [
+              1.2609181338873476,
+              2.6626879307477824
+            ],
+            "position_range": 1.4017697968604348
+          },
+          {
+            "test_sample": "K4.50",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.27"
+            ],
+            "actual": 4.5,
+            "predicted": 7.310402184240682,
+            "position_predictions": [
+              5.7570951024108705,
+              8.126349484596465,
+              8.047761965714711
+            ],
+            "position_range": 2.369254382185595
+          }
+        ]
+      }
+    }
+  },
+  "source_sha256": "2b2b32e26638988517645f00baf9197447db39a111d2ffd35ae0177252c6559d"
+}

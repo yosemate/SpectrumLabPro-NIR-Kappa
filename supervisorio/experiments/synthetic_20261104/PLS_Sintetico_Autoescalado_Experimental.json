@@ -1,0 +1,132 @@
+{
+  "schema": 1,
+  "method": "raw",
+  "components": 1,
+  "channels": [
+    610,
+    680,
+    730,
+    760,
+    810,
+    860
+  ],
+  "units": "relative_fraction",
+  "mode": "seco",
+  "reference": null,
+  "coef": [
+    -4.669707027079647,
+    -5.039677296130613,
+    -5.364168169859677,
+    -5.2821138646727395,
+    -4.7877173405563855,
+    -4.766703993316954
+  ],
+  "offset": 33.48694878526471,
+  "sample_ids": [
+    "K19.28",
+    "K19.95",
+    "K4.27",
+    "K4.50"
+  ],
+  "kappa_range": [
+    4.27,
+    19.95
+  ],
+  "limitation": "EXPERIMENTAL SINTÉTICO — alvos herdados das quatro referências; seleção exploratória; sem validação industrial. Autoescalonamento incorporado aos coeficientes.",
+  "display_name": "PLS sintético autoescalado experimental",
+  "training_preprocessing": {
+    "name": "channel autoscaling folded into raw coefficients",
+    "mean": [
+      0.6882648400856834,
+      0.7230502870344427,
+      0.7262079012023139,
+      0.7343260354596887,
+      0.7121803643897247,
+      0.7227216526791672
+    ],
+    "sample_std": [
+      0.23261147815316502,
+      0.21333672767086503,
+      0.19119086604362082,
+      0.19759031220668666,
+      0.2242431242799954,
+      0.2282489810424796
+    ]
+  },
+  "synthetic_training": {
+    "generated_rows": 262144,
+    "original_measured_rows_in_estimator": 0,
+    "real_parent_sample_count": 4,
+    "recipe": {
+      "scenario": "broad",
+      "n_per_parent": 65536,
+      "seed": 0,
+      "envelope": {
+        "scale": 0.2,
+        "offset": 0.01,
+        "tilt": 0.05,
+        "noise": 0.01,
+        "white": 10
+      }
+    },
+    "calibration_id": "96dbbceb5e9649cb84358e6f1a9c7d07",
+    "global_cv_percent": 0.35712754608467084
+  },
+  "validation": {
+    "validation": "leave-one-physical-sample-out; generator never sees heldout sample; same four references used to explore scenarios; not independent confirmation",
+    "methods": {
+      "raw": {
+        "metrics": {
+          "n_samples": 4,
+          "rmse": 4.819793799371833,
+          "mae": 4.173338315678824,
+          "bias": 0.428940250682347,
+          "r2": 0.5998271816660506
+        },
+        "folds": [
+          {
+            "test_sample": "K19.28",
+            "train_samples": [
+              "K19.95",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.28,
+            "predicted": 22.380449466799035
+          },
+          {
+            "test_sample": "K19.95",
+            "train_samples": [
+              "K19.28",
+              "K4.27",
+              "K4.50"
+            ],
+            "actual": 19.95,
+            "predicted": 12.461203870007045
+          },
+          {
+            "test_sample": "K4.27",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.50"
+            ],
+            "actual": 4.27,
+            "predicted": 5.2488040286099205
+          },
+          {
+            "test_sample": "K4.50",
+            "train_samples": [
+              "K19.28",
+              "K19.95",
+              "K4.27"
+            ],
+            "actual": 4.5,
+            "predicted": 9.625303637313387
+          }
+        ]
+      }
+    }
+  },
+  "source_sha256": "cdfc6eb27de1a0567e31fa16bc771c66fcf4dc20ee726cb36d820220e94a34ff"
+}

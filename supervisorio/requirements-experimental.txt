@@ -1,0 +1,2 @@
+# Training only. JSON coefficient inference requires only existing NumPy.
+scikit-learn==1.9.1

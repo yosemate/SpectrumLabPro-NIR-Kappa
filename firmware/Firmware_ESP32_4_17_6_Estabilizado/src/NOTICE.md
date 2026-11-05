@@ -1,0 +1,1 @@
+Driver derivado de Adafruit_AS726X instalado no ambiente. Cabeçalhos de licença BSD preservados. Alterações locais: timeout de 200 ms em registradores virtuais, verificação de falhas I2C e inicialização do buffer. Bibliotecas instaladas globalmente não foram alteradas.

@@ -1,0 +1,54 @@
+[
+  {
+    "sample_id": "Celulose Branqueada",
+    "reference": 0.58,
+    "reference_status": "assumed",
+    "fit_predictions": [
+      7.467783187187061
+    ],
+    "fit_sample_mean": 7.467783187187061,
+    "note": "assumed reference, excluded from training and scoring"
+  },
+  {
+    "sample_id": "K19.28",
+    "reference": 19.28,
+    "reference_status": "laboratory",
+    "fit_predictions": [
+      19.37267838740825,
+      19.45771698856857,
+      16.84297937545564
+    ],
+    "fit_sample_mean": 18.557791583810822,
+    "note": "training fit, not independent validation"
+  },
+  {
+    "sample_id": "K19.95",
+    "reference": 19.95,
+    "reference_status": "laboratory",
+    "fit_predictions": [
+      20.277709443264982
+    ],
+    "fit_sample_mean": 20.277709443264982,
+    "note": "training fit, not independent validation"
+  },
+  {
+    "sample_id": "K4.27",
+    "reference": 4.27,
+    "reference_status": "laboratory",
+    "fit_predictions": [
+      2.950532827409134
+    ],
+    "fit_sample_mean": 2.950532827409134,
+    "note": "training fit, not independent validation"
+  },
+  {
+    "sample_id": "K4.50",
+    "reference": 4.5,
+    "reference_status": "laboratory",
+    "fit_predictions": [
+      6.213966145515066
+    ],
+    "fit_sample_mean": 6.213966145515066,
+    "note": "training fit, not independent validation"
+  }
+]

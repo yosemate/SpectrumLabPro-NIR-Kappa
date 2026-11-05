@@ -1,0 +1,18 @@
+{
+  "files": {
+    "AmostraCelulose Branqueada.pdf": "69bc42fb7fed7f971d0e1b024c3ad8589511d1e957a6d989ea4c2d4b69653c7d",
+    "AmostraKappa4.27.pdf": "d31a054700423f9e762576a0687961c8a501d6a04239084de53f920af04dc90f",
+    "AmostraKappa4.50.pdf": "c34d858c5bf5acceda9edede97de666b8fd6e99ccbcb982bf4f1161bf8755a70",
+    "AmostraKappa19.95.pdf": "3e7f02d6ff141a1643f2c52b677f240d6031f2afd4b3cf7238e07a85c9b9256f",
+    "AmostraKappa19.28.pdf": "6a593e3fdd2ffe5f4be59d390513d3c3c0849ad082975eaa1adab82eb1c58d60",
+    "AmostraKappa19.28Leitura2.pdf": "8366db3bf8ba7855613990b8e37789471b6a2cc992eac11967072222884247bd",
+    "AmostraKappa19.28Leitura3.pdf": "10c742d0f9b7dd695d9cccf0ab6d1a5ddb6ffe4d3e16ffd64ac2bb954b3f3eb8",
+    "Historico_Ensaios_20261104_134937.csv": "5ab796d5c956583c24437a2db3b31b580f2bada5d7a82e829e639556bbe202f3"
+  },
+  "excluded_history_ids": [
+    "AM-D3C2F70C",
+    "AM-E806FB12"
+  ],
+  "reference_warning": "Kappa targets supplied by user-labelled filenames; independent laboratory certificates not supplied. Celulose Branqueada 0.58 assumed.",
+  "positions": "K19.28 positions 1/2/3 are the same physical sample per user conversation; never independent references."
+}
